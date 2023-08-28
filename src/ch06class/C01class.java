@@ -6,7 +6,7 @@ public class C01class {
         System.out.println("System.identityHashCode(o1) = " + System.identityHashCode(o1));
 
         System.out.println("o1.age = " + o1.age);
-        
+
         o1.age = 30;
 
         System.out.println("o1.age = " + o1.age);
@@ -24,9 +24,9 @@ class MyClass01 {
     //인스턴스가 가져야하는 속성들
     //instance fields
     int age;
-    
+
     //인스턴스가 가져야하는 기능들
     //instance methods
-    
-    
+
+
 }

@@ -25,6 +25,10 @@ class MyClass01 {
     //instance fields
     int age;
 
+    String name;
+
+    String address;
+
     //인스턴스가 가져야하는 기능들
     //instance methods
 

@@ -1,4 +1,4 @@
-package ch07extends.book;
+package ch07extends.book.sec07.exam01;
 
 public class SmartPhone extends Phone{
 

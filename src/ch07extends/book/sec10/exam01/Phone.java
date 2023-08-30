@@ -1,6 +1,6 @@
 package ch07extends.book.sec10.exam01;
 
-class Phone {
+abstract class Phone {
     String owner;
 
     Phone(String owner) {

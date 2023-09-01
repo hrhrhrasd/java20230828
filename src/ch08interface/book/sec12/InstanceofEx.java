@@ -1,6 +1,6 @@
 package ch08interface.book.sec12;
 
-public class InterfaceofEx {
+public class InstanceofEx {
     public static void main(String[] args) {
 
         Taxi taxi =new Taxi();

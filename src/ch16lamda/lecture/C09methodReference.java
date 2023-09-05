@@ -14,6 +14,7 @@ class MyClass09 {
      void someMethod(int a) {
 
     }
+
 }
 
 interface MyInterface09 {

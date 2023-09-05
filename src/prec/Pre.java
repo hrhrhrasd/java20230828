@@ -5,17 +5,35 @@ import java.util.regex.*;
 
 public class Pre {
     public static void main(String[] args) {
-        int a = 11; int cnt=0;
-        int n = 2;
-        Loop1:
-        for (int j = n - 1; j >= 1; j--) {
-            a %= 3 * Math.pow(5, j);
-            if (a > 2 * Math.pow(5, j) && a <= 3 * Math.pow(5, j))
-                continue Loop1;
-            else
-                a %= Math.pow(5, j);
+        Pre pre = new Pre();
+        System.out.println(pre.sumNumbers("5hoco1a1e"));
+
+    }
+
+    public int sumNumbers(String str) {
+        int asd= 0;
+
+        String a = str.replaceAll("[^0-9]"," ");
+
+        if (a.trim().equals("")) {
+            return 0;
         }
 
-        System.out.println(a);
+        String[] b = a.trim().split(" ");
+        for (int i=0; i<b.length;i++) {
+            b[i] = b[i].replaceAll(" ", "");
+        }
+
+        System.out.println(Arrays.toString(b));
+
+        for (int i=0; i<b.length;i++) {
+            if (b[i].equals("")) {
+
+            } else {
+                asd += Integer.parseInt(b[i].trim());
+            }
+
+        }
+        return asd;
     }
 }

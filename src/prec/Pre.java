@@ -6,34 +6,21 @@ import java.util.regex.*;
 public class Pre {
     public static void main(String[] args) {
         Pre pre = new Pre();
-        System.out.println(pre.sumNumbers("5hoco1a1e"));
+        int[][] asd = {{7}, {3, 8}, {8, 1, 0}, {2, 7, 4, 4}, {4, 5, 2, 6, 5}};
+        System.out.println(pre.solution(asd));
 
     }
 
-    public int sumNumbers(String str) {
-        int asd= 0;
 
-        String a = str.replaceAll("[^0-9]"," ");
-
-        if (a.trim().equals("")) {
-            return 0;
+    public int solution(int[][] triangle) {
+        int answer = triangle[0][0];
+        int n = 0;
+        for (int i = 1; i < triangle.length; i++) {
+            answer += triangle[i][n] > triangle[i][n + 1] ?
+                    triangle[i][n] : triangle[i][n + 1];
+            n = triangle[i][n] > triangle[i][n + 1] ? n : n + 1;
         }
 
-        String[] b = a.trim().split(" ");
-        for (int i=0; i<b.length;i++) {
-            b[i] = b[i].replaceAll(" ", "");
-        }
-
-        System.out.println(Arrays.toString(b));
-
-        for (int i=0; i<b.length;i++) {
-            if (b[i].equals("")) {
-
-            } else {
-                asd += Integer.parseInt(b[i].trim());
-            }
-
-        }
-        return asd;
+        return answer;
     }
 }

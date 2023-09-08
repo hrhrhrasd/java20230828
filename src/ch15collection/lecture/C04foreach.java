@@ -1,5 +1,6 @@
 package ch15collection.lecture;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,4 +36,5 @@ class MyClass04 {
                 "name='" + name + '\'' +
                 '}';
     }
+
 }

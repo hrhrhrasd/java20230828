@@ -1,4 +1,4 @@
-package ch15collection.book.QQ;
+package ch15collection.book.qq;
 
 import java.util.ArrayList;
 import java.util.List;

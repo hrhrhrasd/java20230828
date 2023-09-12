@@ -21,23 +21,27 @@ public class Pre {
 
 
 class Solution {
-    public boolean divideArray(int[] nums) {
-        int a = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i=0; i < nums.length; i++) {
-            if (map.containsKey(nums[i])) {
-                a = map.get(nums[i]);
-                map.put(nums[i], a+1);
+    public boolean backspaceCompare(String s, String t) {
+        Stack<Character> s1 = new Stack<>();
+        Stack<Character> s2 = new Stack<>();
+        for (char a : s.toCharArray()) {
+            if (a == '#') {
+                if (!s1.isEmpty())
+                s1.pop();
             } else {
-                map.put(nums[i], 1);
+                s1.push(a);
             }
         }
 
-        for (Integer v : map.values()) {
-            if (v %2 == 1) {
-                return false;
+        for (char a : t.toCharArray()) {
+            if (a == '#') {
+                s2.pop();
+            } else {
+                s2.push(a);
             }
         }
-        return true;
-    }
-}
+        if (s1.equals(s2)) {
+            return true;
+        }
+        return false;
+}}
